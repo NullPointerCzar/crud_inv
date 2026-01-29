@@ -19,6 +19,18 @@ form.addEventListener("submit", (e) => {
   inventory.push(newItem);
 
   console.log(inventory);
+  renderInventory();
 
   form.reset();
 });
+
+const renderInventory = () => {
+  list.innerHTML = "";
+
+  inventory.forEach((item) => {
+    const li = document.createElement("li");
+
+    li.textContent = `${item._name} (Qty: ${item._quantity})`;
+    list.appendChild(li);
+  });
+};
