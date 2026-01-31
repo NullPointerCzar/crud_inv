@@ -96,6 +96,21 @@
     font-weight: 500;
     color: var(--dark);
     min-width: 100px;
+    transition: all 0.2s;
+}
+
+/* ========== Checkbox ========== */
+.item-checkbox {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--primary);
+    cursor: pointer;
+}
+
+#item-list li.checked .item-name,
+#item-list li.checked .item-qty {
+    text-decoration: line-through;
+    opacity: 0.5;
 }
 
 .item-qty {
