@@ -1,0 +1,188 @@
+/* ========== Main Container ========== */
+#app {
+    max-width: 420px;
+    margin: 0 auto;
+    background: var(--white);
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+}
+
+/* ========== Header ========== */
+#app > h1 {
+    color: var(--primary);
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+
+/* ========== Form ========== */
+#item-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 24px;
+}
+
+#item-form input {
+    padding: 12px 14px;
+    border: 2px solid var(--border);
+    border-radius: 8px;
+    font-size: 0.9rem;
+    color: var(--dark);
+    transition: border-color 0.2s;
+}
+
+#item-form input:focus {
+    border-color: var(--primary);
+}
+
+#item-form input::placeholder {
+    color: var(--light-gray);
+}
+
+#item-name {
+    flex: 1;
+}
+
+#item-qty {
+    width: 65px;
+    text-align: center;
+}
+
+#item-form button[type="submit"] {
+    padding: 12px 18px;
+    background: var(--primary);
+    color: var(--white);
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+#item-form button[type="submit"]:hover {
+    background: var(--primary-hover);
+}
+
+/* ========== Item List ========== */
+#item-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#item-list:empty::before {
+    content: 'No items yet';
+    display: block;
+    text-align: center;
+    color: var(--light-gray);
+    padding: 40px 0;
+}
+
+/* ========== Individual Item ========== */
+#item-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 16px;
+    background: var(--bg);
+    border-radius: 10px;
+    flex-wrap: wrap;
+}
+
+.item-name {
+    flex: 1;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--dark);
+    min-width: 100px;
+}
+
+.item-qty {
+    background: var(--primary);
+    color: var(--white);
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+/* ========== Buttons ========== */
+.edit-btn,
+.delete-btn {
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.edit-btn {
+    background: transparent;
+    color: var(--primary);
+    border: 1px solid var(--primary);
+}
+
+.edit-btn:hover {
+    background: var(--primary);
+    color: var(--white);
+}
+
+.delete-btn {
+    background: transparent;
+    color: var(--danger);
+    border: 1px solid var(--danger);
+}
+
+.delete-btn:hover {
+    background: var(--danger);
+    color: var(--white);
+}
+
+/* ========== Edit Mode ========== */
+.edit-name,
+.edit-qty {
+    padding: 8px 10px;
+    border: 2px solid var(--primary);
+    border-radius: 6px;
+    font-size: 0.85rem;
+    color: var(--dark);
+}
+
+.edit-name {
+    flex: 1;
+    min-width: 80px;
+}
+
+.edit-qty {
+    width: 50px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.save-btn,
+.cancel-btn {
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 0.7rem;
+    font-weight: 500;
+    flex-shrink: 0;
+}
+
+.save-btn {
+    background: var(--success);
+    color: var(--white);
+}
+
+.save-btn:hover {
+    background: var(--success-hover);
+}
+
+.cancel-btn {
+    background: var(--gray);
+    color: var(--white);
+}
+
+.cancel-btn:hover {
+    background: var(--dark);
+}
